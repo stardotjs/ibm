@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+    <script>
+        function successFun(pos){
+            document.getElementById("ts").innerText = new Date(pos.timestamp);
+            document.getElementById("lon").innerText = pos.coords.longitude;
+            document.getElementById("lat").innerText = pos.coords.latitude;
+            document.getElementById("acc").innerText = Math.round( pos.coords.accuracy ) +" meters";
+        }
+        function failFun(err){
+            alert(err.message)
+        }
+        window.onload = function(){
+            if( navigator.geolocation ){
+                document.getElementById("geo").innerText = "Available";
+                navigator.geolocation.getCurrentPosition(successFun, failFun);
+            }else{
+                document.getElementById("geo").innerText = "Not Available";
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li> Geolocation : <span id="geo"></span></li>
+        <li>Longitude :  <span id="lon"></span></li>
+        <li>Latitude :  <span id="lat"></span></li>
+        <li>Time Stamp : <span id="ts"></span></li>
+        <li>Location Accuracy :  <span id="acc"></span></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            width: 600px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        var username = null;
+        var userage = null;
+        window.onload = function(){
+            username = document.getElementById("username");
+            username.setCustomValidity("Enter Your Name");
+            //---------------------------------------------
+            userage = document.getElementById("userage");
+            userage.setCustomValidity("Enter Your Age");
+            //---------------------------------------------
+            username.oninput = checkNameValidation;
+            userage.oninput = checkAgeValidation;
+        }
+        function checkNameValidation(){
+            if(username.value !== ""){
+                username.setCustomValidity("");
+            }
+        }
+        function checkAgeValidation(){
+            if(Number(userage.value) < 18 ){
+                userage.setCustomValidity("age is less than 18 you can't join us yet");
+            }else if(Number(userage.value) > 90 ){
+                userage.setCustomValidity("age is more than 90 you can't join us now");
+            }else{
+                userage.setCustomValidity("");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login Form | Validation</h1>
+    <form id="userForm" action="#" method="get">
+        <table>
+            <tbody>
+                <tr>
+                    <th>User Name</th>
+                    <td> <input required name="username" id="username" type="text"/> </td>
+                </tr>
+                <tr>
+                    <th>User Age</th>
+                    <td> <input required name="userage" id="userage" type="number"/> </td>
+                </tr>
+                <tr>
+                    <th>User Phone</th>
+                    <td> <input required pattern="\d{3}-\d{4}-\d{4}" title="###-####-####" name="userphone" type="tel"/> </td>
+                </tr>
+                <tr>
+                    <th>User eMail</th><!-- "\S+@\S+\.\S+" -->
+                    <td> <input required pattern="\S+@\S+\.com+" name="usermail" type="email"/> </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td> <button type="submit"> Submit Form </button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

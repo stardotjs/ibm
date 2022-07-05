@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        table{
+            width: 600px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function inputHandler(source, target){
+            document.getElementById(target).value = source.value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Form Input API</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Sl #</th>
+                <th>Type of Input</th>
+                <th>As Rendered by the browser</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Text</td>
+                <td> <input placeholder="enter your employee id" type="text" oninput="inputHandler(this,'text_input')"> </td>
+                <td> <output id="text_input"></output> </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Search</td>
+                <td> <input oninput="inputHandler(this,'search_input')" type="search"> </td>
+                <td> <output id="search_input"></output> </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Color</td>
+                <td> <input type="color" oninput="inputHandler(this, 'color_input')"> </td>
+                <td> <output id="color_input"></output> </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Range</td>
+                <td> <input type="range" oninput="inputHandler(this, 'range_input')"> </td>
+                <td> <output id="range_input"></output> </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Time</td>
+                <td> <input type="time" oninput="inputHandler(this, 'time_input')"> </td>
+                <td> <output id="time_input"></output> </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Date</td>
+                <td> <input type="date" oninput="inputHandler(this, 'date_input')"> </td>
+                <td> <output id="date_input"></output> </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Week</td>
+                <td> <input type="week" oninput="inputHandler(this, 'week_input')"> </td>
+                <td> <output id="week_input"></output> </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Month</td>
+                <td> <input type="month" oninput="inputHandler(this, 'month_input')"> </td>
+                <td> <output id="month_input"></output> </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Number</td>
+                <td> <input type="number" oninput="inputHandler(this, 'number_input')"> </td>
+                <td> <output id="number_input"></output> </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Local Date Time</td>
+                <td> <input type="datetime-local" oninput="inputHandler(this, 'datetime-local_input')"> </td>
+                <td> <output id="datetime-local_input"></output> </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>URL</td>
+                <td> <input autofocus type="url" oninput="inputHandler(this, 'url_input')"> </td>
+                <td> <output id="url_input"></output> </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Telephone</td>
+                <td> <input type="tel" oninput="inputHandler(this, 'tel_input')"> </td>
+                <td> <output id="tel_input"></output> </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>eMail</td>
+                <td> <input type="email" oninput="inputHandler(this, 'email_input')"> </td>
+                <td> <output id="email_input"></output> </td>
+            </tr>
+            <tr>
+                <td colspan="4">Outputs</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Progress</td>
+                <td> <progress></progress> </td>
+                <td>  </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Progress with 0.5 progress</td>
+                <td> <progress value="0.5"></progress> </td>
+                <td>  </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Progress with range</td>
+                <td>
+                    <input value="0" oninput="inputHandler(this,'progrange')" type="range" min="0" max="1" step="0.1">
+                </td>
+                <td> <progress id="progrange"></progress>  </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Meter</td>
+                <td>
+                    <meter value="0.5"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Meter</td>
+                <td>
+                    <meter low="0.3" high="0.8" optimum="0.5" value="0.5"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Meter less than low</td>
+                <td>
+                    <meter low="0.3" high="0.8" optimum="0.5" value="0.2"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Meter higher than high</td>
+                <td>
+                    <meter low="0.3" high="0.8" optimum="0.5" value="0.9"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Meter value higher than high optimum lower than low</td>
+                <td>
+                    <meter low="0.3" high="0.8" optimum="0.2" value="0.9"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Meter value lower than low optimum higher than high  </td>
+                <td>
+                    <meter low="0.3" high="0.8" optimum="0.9" value="0.2"></meter>
+                </td>
+                <td> 
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

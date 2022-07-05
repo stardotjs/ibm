@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media API</title>
+    <script>
+        function playVideo(){
+            document.getElementById("vid").play();
+            // console.log(document.getElementById("vid").canPlayType('video/mp4'));
+            // console.log(document.getElementById("vid").canPlayType('video/webm'));
+            setInterval(function(){
+                document.getElementById("videolog").textContent = document.getElementById("vid").currentTime;
+            }, 10)
+        }
+        function pauseVideo(){
+            document.getElementById("vid").pause();
+        }
+        function rewindVideo(){
+            document.getElementById("vid").currentTime = document.getElementById("vid").currentTime-0.50;
+        }
+        function forwardVideo(){
+            document.getElementById("vid").currentTime = document.getElementById("vid").currentTime+0.50;
+        }
+        function stopVideo(){
+            document.getElementById("vid").currentTime = 0;
+            document.getElementById("vid").pause();
+        }
+    </script>
+</head>
+<body>
+    <video width="550" height="400" poster="images/rajani.jpg" id="vid">
+        <source src="media/html5.webm">
+        <source src="media/html5.mp4">
+    </video>
+    <h2>Current Time : <span id="videolog"></span></h2>
+    <br>
+    <button onclick="playVideo()">Play</button>
+    <button onclick="pauseVideo()">Pause</button>
+    <button onclick="stopVideo()">Stop</button>
+    <button onclick="rewindVideo()">Rewind</button>
+    <button onclick="forwardVideo()">Forward</button>
+</body>
+</html>

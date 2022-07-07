@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: aqua;
+        }
+        p{
+            background-color: darkkhaki;
+        }
+        html body p[id][id="box"][id^="b"][id$="x"][class]#box.player.a.x.y{ /* 145 */
+            background-color: lightcoral;
+        }
+        html body p[id][class]#box.player.a.x.y{ /* 145 */
+            background-color: darkred;
+        }
+        html body p[id]#box.player.a.x.y{ /* 143 */
+            background-color: lawngreen;
+        }
+        html body p#box.player.a.x.y{ /* 143 */
+            background-color: darkslategray;
+        }
+        body p#box.player.a.x.y{ /* 142 */
+            background-color: darkorange;
+        }
+        p#box.player.a.x.y{ /* 141 */
+            background-color: darkmagenta;
+        }
+        p.player.a.x.y{ /* 41 */
+            background-color: crimson;
+        }
+        p.player.a.x{ /* 31 */
+            background-color: yellowgreen;
+        }
+        p.player.a{ /* 21 */
+            background-color: darkgoldenrod;
+        }
+        p.player{ /* 11 */
+            background-color: rgb(234, 234, 20) !important;
+        }
+        p{
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <p class="player">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sunt! Non sit, consequatur ea ad repellendus facere corporis adipisci earum consectetur ipsa consequuntur, cum inventore iusto officia eveniet maxime beatae.
+    </p>
+    <p class="x">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sunt! Non sit, consequatur ea ad repellendus facere corporis adipisci earum consectetur ipsa consequuntur, cum inventore iusto officia eveniet maxime beatae.
+    </p>
+    <p id="box" class="player a x y" style="background-color: aqua;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sunt! Non sit, consequatur ea ad repellendus facere corporis adipisci earum consectetur ipsa consequuntur, cum inventore iusto officia eveniet maxime beatae.
+    </p>
+    <p class="a">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sunt! Non sit, consequatur ea ad repellendus facere corporis adipisci earum consectetur ipsa consequuntur, cum inventore iusto officia eveniet maxime beatae.
+    </p>
+    <p class="y">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, sunt! Non sit, consequatur ea ad repellendus facere corporis adipisci earum consectetur ipsa consequuntur, cum inventore iusto officia eveniet maxime beatae.
+    </p>
+</body>
+</html>

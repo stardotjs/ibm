@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:checked{
+            outline: 5px solid red;
+        }
+        button:enabled{
+            background-color: chartreuse;
+        }
+        button:disabled{
+            background-color: darkcyan;
+        }
+        p.first::selection{
+            background-color: mediumspringgreen;
+            color: darkolivegreen;
+        }
+        p.second::selection{
+            background-color: rgb(245, 73, 228);
+            color: rgb(84, 5, 82);
+        }
+        :root{
+            border: 15px dotted blueviolet;
+        }
+        p:empty{
+            border: 2px solid red;
+        }
+        p:not(:empty){
+            border: 2px solid rgb(35, 8, 207);
+        }
+        p:not(.first){
+            background-color: yellow;
+        }
+        /* label input{
+            outline: 5px dashed rgb(177, 208, 22);
+        } */
+        body > input{
+            outline: 5px dashed rgb(177, 208, 22);
+        }
+    </style>
+</head>
+<body>
+    <label>Check box : 
+        <input type="checkbox">
+    </label>
+    <br>
+    <input type="checkbox">
+    <br>
+    <label>
+        Radio Button : 
+        <input type="radio">
+    </label>
+    <hr>
+    <label>Checked Check box : 
+        <input checked type="checkbox">
+    </label>
+    <br>
+    <label>
+        Checked Radio Button : 
+        <input name="gen" checked type="radio">
+        <input name="gen" checked type="radio">
+    </label>
+    <br>
+    <button disabled>Click Me</button>
+    <button>Click Me</button>
+    <button disabled>Click Me</button>
+    <p class="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit possimus ullam modi doloremque veritatis debitis et quam aliquam quaerat dolores, earum culpa fuga quisquam magnam quas commodi, sit nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aspernatur saepe itaque id officiis, nobis porro voluptate architecto facilis consequuntur similique natus! Minus dolor sapiente exercitationem quam pariatur, id obcaecati.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit fuga laudantium a, reprehenderit molestias, quos, ad saepe delectus harum similique ea officiis repellendus ducimus assumenda. Debitis inventore fugit maxime iure.
+    </p>
+    <p class="second">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit possimus ullam modi doloremque veritatis debitis et quam aliquam quaerat dolores, earum culpa fuga quisquam magnam quas commodi, sit nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aspernatur saepe itaque id officiis, nobis porro voluptate architecto facilis consequuntur similique natus! Minus dolor sapiente exercitationem quam pariatur, id obcaecati.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit fuga laudantium a, reprehenderit molestias, quos, ad saepe delectus harum similique ea officiis repellendus ducimus assumenda. Debitis inventore fugit maxime iure.
+    </p>
+    <p></p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus asperiores quisquam molestiae ea tempora vitae doloremque inventore libero reprehenderit, voluptas maxime voluptates eligendi sit temporibus autem quibusdam perspiciatis animi?
+    </p>
+</body>
+</html>
+
+<!--
+:checked
+:enabled
+:disabled
+::selection
+:root
+:empty
+:not()
+> direct child
+-->

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        Element Selector 
+        ul{
+            border: 2px solid red;
+        }
+        li{
+            border: 2px solid red;
+        }
+        p{
+            border: 2px solid red;
+        }
+        */
+        /* 
+        class selector 
+        .box{
+            border: 2px solid red;
+        }
+        */
+        /*
+        ID Selector 
+        #player{
+            border: 2px solid red;
+        }
+        */
+        /* Decendent Selecor 
+        p span{
+            background-color: crimson;
+            color:  cornsilk;
+        }
+        */
+       /*  
+        a:link{
+            color: darkorange;
+        } 
+        */
+        /* Pseudo Class Selector
+        a:visited{
+            color: orangered;
+        }
+        a:hover{
+            color: orangered;
+        }
+        a:hover:visited{
+            color: deeppink;
+        }
+        */
+        /*
+        Pseudo Element Selector 
+        p:first-letter{
+            color: deeppink;
+            font-size: 40px;
+        }
+        ol li:after{
+            content: "click me";
+            background-color: aqua;
+            margin-left: 10px;
+        }
+        p:first-line{
+            background-color: yellow;
+        }
+        */
+        /* 
+        Dynamic Pseudo Class Selectors
+        input:hover{
+            background-color: darkmagenta;
+        }
+        input:focus{
+            background-color: darkorange;
+        }
+        input:active{
+            background-color: crimson;
+            color: aliceblue;
+        }
+        */
+        /*
+        Lang Pseudo selector 
+        p:lang(en){
+            background-color: crimson;
+            color: papayawhip;
+            padding: 10px;
+        }
+        p:lang(es){
+            background-color: midnightblue;
+            color: papayawhip;
+            padding: 10px;
+        }
+        p:lang(fr){
+            background-color: greenyellow;
+            color: darkblue;
+            padding: 10px;
+        }
+        */
+        /*
+        Adjecent Sibling Selector
+        ul+p{
+            background-color: darkorange;
+        }
+        */
+        /*
+        General Sibling Selector
+        ul~p{
+            background-color: darkorange;
+        }
+        */
+        /* selector group 
+        p, ol, input, ul{
+            border:  2px dotted crimson;
+        }
+        */
+        /*
+        universal selector
+        body *{
+            border: 5px dashed crimson;
+        }
+        */
+    </style>
+</head>
+<body>
+    <ol>
+        <li>List Item 1</li>
+        <li class="box">List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+    </ol>
+    <input type="text">
+    <br>
+    <input type="text">
+    <br>
+    <span>I am a Span Tag</span>
+    <p lang="en" id="player">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero culpa voluptates eveniet magni tempore molestias ipsa repudiandae quia. Illum quibusdam minima amet placeat enim, alias provident ipsa aliquam debitis corporis!
+    </p>
+    <p lang="es" class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quidem <span>I am a Span Tag</span> adipisci nisi libero asperiores a perferendis, enim ullam voluptate vero tempore molestiae aspernatur cumque veniam. Iure ad nihil consequatur unde.
+    </p>
+    <p lang="fr">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi error sapiente ratione, debitis itaque totam quidem, minus consectetur officia voluptatum maiores quam deserunt nihil nesciunt porro distinctio? Quae, deleniti excepturi?
+    </p>
+    <ul>
+        <li><a>Link Item 1 Empty Link</a></li>
+        <li><a href="http://avengers.com">Link Item 2 Unvisited Link</a></li>
+        <li><a href="http://google.com">Link Item 3 Visited Link</a></li>
+        <li><a href="#">Link Item 4 Dummy Link</a></li>
+        <li><a href="#">Link Item 5 Dummy Link</a></li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, voluptas nostrum officia commodi maxime at voluptatem culpa deserunt aliquam repellendus, sint corrupti facilis iusto modi hic maiores voluptatibus? Officiis, ducimus?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio sint ullam culpa officiis! Asperiores nam vero quae nisi sed. Eligendi ut distinctio et non. Atque, repellat animi. Hic, praesentium quas!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem, voluptas nostrum officia commodi maxime at voluptatem culpa deserunt aliquam repellendus, sint corrupti facilis iusto modi hic maiores voluptatibus? Officiis, ducimus?
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio sint ullam culpa officiis! Asperiores nam vero quae nisi sed. Eligendi ut distinctio et non. Atque, repellat animi. Hic, praesentium quas!
+    </p>
+</body>
+</html>

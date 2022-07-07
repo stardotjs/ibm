@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storages | window - Local - Session</title>
+    <script>
+        // up to 5mb; 
+
+        /*
+        var user = "Vijay";
+        onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                user = document.getElementById("userNameInput").value;
+                alert("username is set");
+            }
+            document.getElementsByTagName("button")[1].onclick = function(){
+                alert("username is "+window.user);
+            }
+        }
+        */
+
+       /*  
+       onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                localStorage.user = document.getElementById("userNameInput").value;
+            }
+            document.getElementsByTagName("button")[1].onclick = function(){
+                alert("username is "+localStorage.user);
+            }
+        } 
+        */
+       /*  
+       onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                sessionStorage.user = document.getElementById("userNameInput").value;
+            }
+            document.getElementsByTagName("button")[1].onclick = function(){
+                alert("username is "+sessionStorage.user);
+            }
+        } 
+        */
+        onload = function(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                localStorage.setItem("userName", document.getElementById("userNameInput").value);
+            }
+            document.getElementsByTagName("button")[1].onclick = function(){
+                localStorage.setItem("userAge", document.getElementById("userAgeInput").value);
+            }
+            document.getElementsByTagName("button")[2].onclick = function(){
+                document.getElementById("uname").textContent = localStorage.getItem("userName");
+                document.getElementById("uage").textContent = localStorage.getItem("userAge");
+            }
+            document.getElementsByTagName("button")[3].onclick = function(){
+                document.getElementById("count").textContent = localStorage.length;
+            }
+            document.getElementsByTagName("button")[4].onclick = function(){
+               localStorage.removeItem("userAge");
+               alert("user's age is now empty")
+            }
+            document.getElementsByTagName("button")[5].onclick = function(){
+               localStorage.clear();
+               alert("user's info is now removed")
+            }
+            document.getElementsByTagName("button")[6].onclick = function(){
+               alert("info at 1st index is "+ localStorage.key(0));
+            }
+        } 
+    </script>
+</head>
+<body>
+    <input id="userNameInput" type="text">
+    <button>Store User Name</button>
+    <br>
+    <input id="userAgeInput" type="text">
+    <button>Store User Age</button>
+    <br>
+    <button>Get User Details</button>
+    <button>Get Storage Length</button>
+    <button>Remove Stored Age</button>
+    <button>Clear Stored Info</button>
+    <button>Get info at 1st index</button>
+    <hr>
+    <ul>
+        <li>Storage Count : <span id="count"></span></li>
+        <li>User Name : <span id="uname"></span></li>
+        <li>User Age : <span id="uage"></span></li>
+    </ul>
+    <h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit culpa fuga voluptatibus debitis ad, facilis expedita impedit atque amet, ipsam ullam animi cumque iusto cupiditate eos beatae eum nam.
+    </h1>
+</body>
+</html>

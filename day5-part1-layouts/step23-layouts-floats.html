@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0px;
+        }
+        .container{
+            background-color: bisque;
+            border: 1px solid darkslategray;
+            margin: auto;
+            width: 950px;
+        }
+        header{
+            height: 50px;
+            background-color: darkgoldenrod;
+        }
+        nav{
+            height: 40px;
+            background-color: rgb(230, 196, 109);
+        }
+        nav a{
+           line-height: 40px;
+           margin-left: 10px;
+           background-color: darkgoldenrod;
+           padding: 5px;
+           color: antiquewhite;
+           text-decoration: none;
+           text-align: center;
+        }
+       
+        header h1{
+            margin: 0px;
+            line-height: 50px;
+            text-align: center;
+            color: beige;
+            font-weight: bold;
+        }
+        main{
+            background-color: azure;
+            border: 1px solid rgb(35, 27, 27);
+        }
+        main:after{
+            content: "";
+            clear: left;
+            display: block;
+        }
+        /*
+        clear-fix
+        display : table;
+
+        main div{
+            clear: left;
+        }
+        */
+        article{
+            background-color: darkgoldenrod;
+            color: azure;
+            width: 300px;
+            float: left;
+            margin-left: 5px;
+            padding: 5px;
+            text-align: justify;
+        }
+        .box1{
+            background-color: rgb(255, 182, 80);
+        }
+        .box2{
+            background-color: goldenrod;
+        }
+        .box3{
+            background-color: darkgoldenrod;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IBM India</h1>
+        </header>
+        <nav>
+            <a href="#"> Link 1 </a>
+            <a href="#"> Link 2 </a>
+            <a href="#"> Link 3 </a>
+            <a href="#"> Link 4 </a>
+            <a href="#"> Link 5 </a>
+        </nav>
+        <main>
+            <article class="box1">
+                <h2>Box 1</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consectetur eligendi aliquam quas quod accusantium aliquid ipsam voluptate nisi placeat iusto perferendis a sapiente officiis at quo eius dolore delectus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+            </article>
+            <article class="box2">
+                <h2>Box 2</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consectetur eligendi aliquam quas quod accusantium aliquid ipsam voluptate nisi placeat iusto perferendis a sapiente officiis at quo eius dolore delectus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+            </article>
+            <article class="box3">
+                <h2>Box 3</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, consectetur eligendi aliquam quas quod accusantium aliquid ipsam voluptate nisi placeat iusto perferendis a sapiente officiis at quo eius dolore delectus?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nesciunt ullam ducimus necessitatibus maxime, quia iusto vitae repellat eveniet pariatur sit architecto error, fugiat optio eos. Laboriosam rerum sed a!
+            </article>
+           <!--  <div></div> -->
+        </main>
+        <footer>
+            &copy; Copyrights reserved by IBM India
+        </footer>
+    </div>
+</body>
+</html>

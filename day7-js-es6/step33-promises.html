@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <script>
+        // Higher Order Function
+        var promise = new Promise(function(resolve,reject){
+            setTimeout(()=>{
+                if(true){ resolve("Success Promise was Resolved")}
+                else{ reject("Error Promise was Rejected") }
+            }, 2000);
+        });
+    /*
+    promise.then(function(res){
+        console.log(" Promise was Resolved ", res);
+    });
+    promise.catch(function(err){
+        console.log(" Promise was Rejected ", err);
+    });
+    promise.finally(function(){
+        console.log(" Promise was Completed ");
+    });
+    */
+
+    promise
+    .then((res)=> { console.log(" Promise was Resolved ", res); return res.toUpperCase() } )
+    .then((res)=> { console.log(" Promise was Resolved ", res); return res.toLowerCase() } )
+    .then((res)=> { console.log(" Promise was Resolved ", res); return res } )
+    .catch((err)=> console.log(" Promise was Rejected ", err))
+    .finally(()=> console.log(" Promise was Completed ") );
+
+    // multiple promises
+    // promise.all
+    // promise.any
+    // promise.race
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

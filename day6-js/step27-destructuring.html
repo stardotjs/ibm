@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+        var hero = {
+            title : "Ironman",
+            power : 6,
+            firstname : "Tony",
+            lastname : "Stark"
+        };
+        /*
+        // hero.title = hero.title.toUpperCase();
+        var tempHero = hero;
+        tempHero.title = tempHero.title.toUpperCase();
+        tempHero.power = tempHero.power * 10;
+        */
+
+        /*
+        console.log( tempHero.title )// ??
+        console.log( tempHero.power )// ??
+        
+        console.log( hero.title )// ??
+        console.log( hero.power )// ??
+        */
+        
+        /*   
+        var heroTitle = hero.title;
+        var heroPower = hero.power;
+        heroTitle = heroTitle.toUpperCase();
+        heroPower = heroPower * 10; 
+        */
+
+       // destructuring 
+       /*  var { 
+            title : heroTitle, 
+            power : heroPower, 
+            firstname: heroFirstName, 
+            lastname : heroLastName 
+        } = hero; */
+
+        /*         
+        var { 
+            title : title, 
+            power : power, 
+            firstname: firstname, 
+            lastname : lastname 
+        } = hero; 
+        */
+
+        var { title, power, firstname, lastname } = hero;
+
+        onload = function(){
+            document.getElementById("htitle").textContent = title.toUpperCase();
+            document.getElementById("hpower").textContent = power * 10;
+            document.getElementById("hfullname").textContent = firstname+" "+lastname;
+        };
+
+        var avengers = ["Ironman", "Hulk", "Antman", "Black Widow"];
+        var [firsthero, secondhero, thirdhero, fourthhero] = avengers;
+        console.log(firsthero, thirdhero, fourthhero);
+        /* 
+        var newheroes = [...avengers];
+        console.log(newheroes); 
+        */
+       /* 
+       var herodata = {...hero};
+       console.log(herodata); 
+       */
+        /*  
+        var herodata = JSON.parse( JSON.stringify(hero) );
+        console.log(herodata); 
+        */
+     
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Hero's Title : <span id="htitle"></span></li> <!-- in upper case-->
+        <li>Hero's Power : <span id="hpower"></span></li> <!-- needs to be boosted 10X before display-->
+        <li>Hero's Full Name : <span id="hfullname"></span></li> <!-- add first name and last name -->
+    </ul>
+</body>
+</html>

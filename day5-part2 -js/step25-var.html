@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // hoisting
+        /* 
+        if(user in window){
+            console.log("user exists")
+        }else{
+            console.log("user do not exists")
+        }
+        var user = "vijay"; 
+        */
+       // console.log( 5 === "5" );// ???
+       /*
+       var hero = {
+           title : "Ironman",
+           firstname : "Tony",
+           lastname : "Stark",
+           city : "New York"
+        };
+        
+        for(var prop in hero){
+            // console.log(prop);
+            console.log(prop,hero[prop]);
+        };
+        */
+       var avangers = ['Ironman', 'Hulk', 'Antman', 'Black widow', 'Thor'];
+       
+       for(var prop of avangers){
+           console.log(prop);
+       };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

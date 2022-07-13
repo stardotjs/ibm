@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        var user = "vijay";
+        window.user = "vijay";
+        user = "vijay";
+        */
+        // ???? 
+
+        /*         
+        let user;
+        const company = "IBM";
+        user = "vijay";
+        company = "google"; 
+        */
+
+        var hero = {
+            title : "Ironman",
+            power : 6 
+        };
+        function checkPower(){
+            if(hero.power > 5){
+                const tempTitle = hero.title; // Temporal Dead Zone ( TDZ )
+                hero.title = tempTitle+" is strong";
+                console.log(tempTitle);// ??? 
+            }
+        };
+        checkPower();
+        console.log(tempTitle);
+        console.log(hero.title);// ???
+
+       /*   
+        for(var i = 0; i < 10; i++){
+            console.log(i);
+        };
+
+        console.log("Outside the loop ",i);// ?? 
+        */
+
+        // const must be initialized 
+        // const can not change their values after initialization
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

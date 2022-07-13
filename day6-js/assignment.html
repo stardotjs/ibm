@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var user = "vijay";
+        // boolean will give you true 
+        // var user = null;
+        // boolean will give you false 
+
+        /*      
+        console.log("hello"+"world");
+        console.log(5+6); \
+        */
+
+        /**/  
+        var favNum = [9,2,23,4,14,27,66,1,99,56,88,3,19];
+        // console.log(favNum.sort());
+        // 1 (ascending) -1 (descending) or 0 (no sort);
+        function sortFun(num1, num2){
+            if(num1 < num2){
+                console.log('if was called with 1', num1, num2);
+                return -1;
+            }else if( num1 > num2){
+                console.log('if else was called with -1', num1, num2);
+                return 1;
+            }else {
+                console.log('else was called with 0')
+                return 0;
+            }
+        }; 
+        // console.log( favNum.sort( sortFun ));
+
+        // typed arrays
+        // var favNum = new Float64Array([9,2,23,4,14,27,66,1,99,56,88,3,19]);
+        // var favNum = new Uint8Array([9,2,23,4,14,27,66,1,99,56,88,3,19]);
+        // var favNum = favNum.sort();
+        // console.log(favNum);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

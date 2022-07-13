@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+    <script>
+        // ES5
+        /*
+        class Hero{
+            constructor(){
+                this.title = "Ironman"
+            }
+        }
+        */
+
+        // ESNext
+        /*
+        class Hero{
+            title = "Ironman";
+        }
+        */
+        /*
+        let hero = new Hero();
+        console.log(hero.title);
+        */
+
+       // class can have properties and methods 
+       // properties and methods can be public private (get and set) or static;
+
+       class Person{
+            canwalk = "default";
+            constructor(cw){
+                this.canwalk = cw;
+            }
+       }
+       class Hero extends Person{
+        firstname = "default firstname";
+        lastname = "default lastname";
+        #mission = "my secret mission";
+        static version = 101;
+        constructor(hfname, hlname, hcw){
+            super(hcw)
+            this.firstname = hfname;
+            this.lastname = hlname;
+        }
+        fullname(){
+            return this.firstname+" "+this.lastname;
+        }
+        get mission(){
+            return this.#mission;
+        }
+        set mission(nmission){
+            this.#mission = nmission;
+        }
+       }
+       var hero = new Hero("Tony", "Stark", "Yes I can walk");
+       console.log(hero.fullname(), hero.mission);
+       hero.mission = "Save the World";
+       console.log(hero.fullname(), hero.mission);
+       console.log(Hero.version);
+       console.log(hero.canwalk);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

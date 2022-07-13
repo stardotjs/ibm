@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Flex Box</title>
+    <style>
+        /*
+        px
+        em 
+        rem
+        vh 
+        vw 
+        %
+        */
+        .container{
+            background-color: rgb(42, 45, 45);
+            height: 600px;
+            display: flex;
+            /* flex-direction: row (default) | column | row-reverse | column-reverse */
+            /* flex-wrap: nowrap (default) | wrap | wrap-reverse ; */
+            /* flex-flow */
+            /* justify-content: flex-start (default) | center | space-between | space-around | space-evenly; */
+            /* align-items: flex-start (default); flex-end | center | stretch | base-line*/
+            /* align-content: flex-start; */
+        }
+        article{
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 100px;
+            color: aliceblue;
+            /* flex-grow: 0 (default) | 1; */
+            flex-basis: 130px;
+        }
+        .box1{
+            background-color: #360568;
+        }
+        .box2{
+            background-color: #400F70;
+        }
+        .box3{
+            background-color: #491877;
+        }
+        .box4{
+            background-color: #5B2A86;
+        }
+        .box5{
+            background-color: #695899;
+        }
+        .box6{
+            background-color: #7785AC;
+        }
+        .box7{
+            background-color: #89A6B9;
+        }
+        .box8{
+            background-color: #9AC6C5;
+        }
+        .box9{
+            background-color: #A0D6C0;
+        }
+        .box10{
+            background-color: #A5E6BA;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <article class="box1">1</article>
+        <article class="box2">2</article>
+        <article class="box3">3</article>
+        <article class="box4">4</article>
+        <article class="box5">5</article>
+        <article class="box6">6</article>
+        <article class="box7">7</article>
+        <article class="box8">8</article>
+        <article class="box9">9</article>
+        <article class="box10">10</article>
+    </section>
+</body>
+</html>
